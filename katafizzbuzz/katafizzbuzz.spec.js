@@ -44,3 +44,10 @@ describe("Handle number containing 3", () => {
     expect(fizzbuzz(31)).toEqual("Fizz");
   });
 });
+
+describe("Handle number containing 5", () => {
+  it("should return Buzz when param contains 5", () => {
+    expect(fizzbuzz(52)).toEqual("Buzz");
+    expect(fizzbuzz(152)).toEqual("Buzz");
+  });
+});
