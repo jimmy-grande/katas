@@ -10,7 +10,11 @@ describe("Basic test", () => {
 });
 
 describe("Handle multiple of 3", () => {
-  it("should return Fizz when param is 3", () => {
+  it("should return Fizz when param a multiple of 3", () => {
     expect(fizzbuzz(3)).toEqual("Fizz");
+    expect(fizzbuzz(6)).toEqual("Fizz");
+    expect(fizzbuzz(9)).toEqual("Fizz");
+    expect(fizzbuzz(12)).toEqual("Fizz");
+    expect(fizzbuzz(15)).toEqual("Fizz");
   });
 });
