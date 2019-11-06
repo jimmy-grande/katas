@@ -51,3 +51,11 @@ describe("Handle number containing 5", () => {
     expect(fizzbuzz(152)).toEqual("Buzz");
   });
 });
+
+describe("Handle bad parameter", () => {
+  it("should throw a TypeError if param is not a number", () => {
+    expect(() => {
+      fizzbuzz("yolo");
+    }).toThrowError(TypeError);
+  });
+});
