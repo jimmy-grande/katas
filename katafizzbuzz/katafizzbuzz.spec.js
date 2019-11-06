@@ -29,3 +29,11 @@ describe("Handle multiple of 5", () => {
     expect(fizzbuzz(10)).toEqual("Buzz");
   });
 });
+
+describe("Handle multiple of 3 & 5", () => {
+  it("should return FizzBuzz when param a multiple of 5", () => {
+    expect(fizzbuzz(15)).toEqual("FizzBuzz");
+    expect(fizzbuzz(30)).toEqual("FizzBuzz");
+    expect(fizzbuzz(45)).toEqual("FizzBuzz");
+  });
+});
