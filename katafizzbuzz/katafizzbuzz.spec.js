@@ -8,3 +8,9 @@ describe("Basic test", () => {
     expect(fizzbuzz(1)).toEqual(1);
   });
 });
+
+describe("Handle multiple of 3", () => {
+  it("should return Fizz when param is 3", () => {
+    expect(fizzbuzz(3)).toEqual("Fizz");
+  });
+});
