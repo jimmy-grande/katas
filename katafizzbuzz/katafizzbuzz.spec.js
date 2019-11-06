@@ -37,3 +37,10 @@ describe("Handle multiple of 3 & 5", () => {
     expect(fizzbuzz(45)).toEqual("FizzBuzz");
   });
 });
+
+describe("Handle number containing 3", () => {
+  it("should return Fizz when param contains 3", () => {
+    expect(fizzbuzz(13)).toEqual("Fizz");
+    expect(fizzbuzz(31)).toEqual("Fizz");
+  });
+});
