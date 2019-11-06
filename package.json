@@ -1,0 +1,15 @@
+{
+  "name": "katas",
+  "version": "1.0.0",
+  "description": "practicing katas",
+  "main": "index.js",
+  "repository": "https://github.com/jimmy-grande/katas.git",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --watchAll --coverage"
+  }
+}
