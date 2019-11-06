@@ -10,6 +10,7 @@
   },
   "scripts": {
     "start": "node index.js",
+    "fizzbuzz": "node ./katafizzbuzz/index.js",
     "test": "jest --watchAll --coverage"
   }
 }
