@@ -12,5 +12,8 @@ describe("Basic test", () => {
 describe("Implement the rule divisible by 3", () => {
   it("should return Foo if number is divisible by 3", () => {
     expect(foobarqix(3)).toEqual("Foo");
+    expect(foobarqix(6)).toEqual("Foo");
+    expect(foobarqix(9)).toEqual("Foo");
+    expect(foobarqix(30)).toEqual("Foo");
   });
 });
