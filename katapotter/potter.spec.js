@@ -20,3 +20,24 @@ describe("Basic test", () => {
     expect(potter([4, 4])).toEqual(8 * 2);
   });
 });
+
+describe("Simple discount", () => {
+  it("should apply a 5% discount if I buy 2 different books", () => {
+    expect(potter([0, 1])).toEqual(8 * 2 * 0.95);
+    expect(potter([1, 2])).toEqual(8 * 2 * 0.95);
+    expect(potter([2, 3])).toEqual(8 * 2 * 0.95);
+    expect(potter([3, 4])).toEqual(8 * 2 * 0.95);
+  });
+  it("should apply a 10% discount if I buy 3 different books", () => {
+    expect(potter([0, 1, 2])).toEqual(8 * 3 * 0.9);
+    expect(potter([0, 1, 3])).toEqual(8 * 3 * 0.9);
+    expect(potter([0, 1, 4])).toEqual(8 * 3 * 0.9);
+  });
+  it("should apply a 20% discount if I buy 4 different books", () => {
+    expect(potter([0, 1, 2, 3])).toEqual(8 * 4 * 0.8);
+    expect(potter([1, 2, 3, 4])).toEqual(8 * 4 * 0.8);
+  });
+  it("should apply a 25% discount if I buy the whole collection", () => {
+    expect(potter([0, 1, 2, 3, 4])).toEqual(8 * 5 * 0.75);
+  });
+});
