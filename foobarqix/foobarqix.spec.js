@@ -26,3 +26,11 @@ describe("Implement the rule divisible by 5", () => {
     expect(foobarqix(20)).toEqual("Bar");
   });
 });
+
+describe("Implement the rule divisible by 7", () => {
+  it("should return Foo if number is divisible by 7", () => {
+    expect(foobarqix(7)).toEqual("Qix");
+    expect(foobarqix(14)).toEqual("Qix");
+    expect(foobarqix(28)).toEqual("Qix");
+  });
+});

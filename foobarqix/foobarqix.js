@@ -5,6 +5,9 @@ function foobarqix(n) {
   if (n % 5 === 0) {
     return "Bar";
   }
+  if (n % 7 === 0) {
+    return "Qix";
+  }
   return n;
 }
 
