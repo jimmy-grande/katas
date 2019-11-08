@@ -1,6 +1,6 @@
 function foobarqix(n) {
   if (n % 3 === 0) {
-    return "Foo";
+    return n % 5 === 0 ? "FooBar" : "Foo";
   }
   if (n % 5 === 0) {
     return "Bar";
