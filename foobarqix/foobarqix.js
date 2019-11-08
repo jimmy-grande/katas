@@ -1,20 +1,8 @@
 function foobarqix(n) {
-  if (n % 3 === 0) {
-    if (n % 5 === 0) {
-      return "FooBar";
-    }
-    if (n % 7 === 0) {
-      return "FooQix";
-    }
-    return "Foo";
-  }
-  if (n % 5 === 0) {
-    return "Bar";
-  }
-  if (n % 7 === 0) {
-    return "Qix";
-  }
   let str = "";
+  if (n % 3 === 0) str += "Foo";
+  if (n % 5 === 0) str += "Bar";
+  if (n % 7 === 0) str += "Qix";
   n &&
     Array.from(n.toString()).forEach(v => {
       if (v === "3") str += "Foo";
