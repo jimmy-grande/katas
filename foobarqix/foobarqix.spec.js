@@ -62,3 +62,18 @@ describe("Implement the rule replace 7 by Qix", () => {
     expect(foobarqix(17)).toEqual("Qix");
   });
 });
+
+describe("Implement combined replaced rules", () => {
+  it("should return FooBar if number contains 3 and 5", () => {
+    expect(foobarqix(53)).toEqual("BarFoo");
+  });
+  it("should return BarFoo if number contains 5 and 3", () => {
+    expect(foobarqix(53)).toEqual("BarFoo");
+  });
+  it("should return FooQix if number contains 3 and 7", () => {
+    expect(foobarqix(37)).toEqual("FooQix");
+  });
+  it("should return QixFoo if number contains 7 and 3", () => {
+    expect(foobarqix(73)).toEqual("QixFoo");
+  });
+});

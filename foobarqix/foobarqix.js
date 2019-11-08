@@ -14,17 +14,14 @@ function foobarqix(n) {
   if (n % 7 === 0) {
     return "Qix";
   }
-
-  if (n && n.toString().includes("3")) {
-    return "Foo";
-  }
-  if (n && n.toString().includes("5")) {
-    return "Bar";
-  }
-  if (n && n.toString().includes("7")) {
-    return "Qix";
-  }
-  return n;
+  let str = "";
+  n &&
+    Array.from(n.toString()).forEach(v => {
+      if (v === "3") str += "Foo";
+      if (v === "5") str += "Bar";
+      if (v === "7") str += "Qix";
+    });
+  return str || n;
 }
 
 module.exports = foobarqix;
