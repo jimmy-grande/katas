@@ -18,6 +18,9 @@ function foobarqix(n) {
   if (n && n.toString().includes("3")) {
     return "Foo";
   }
+  if (n && n.toString().includes("5")) {
+    return "Bar";
+  }
   return n;
 }
 

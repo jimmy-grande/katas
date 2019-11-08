@@ -50,3 +50,9 @@ describe("Implement the rule replace 3 by Foo", () => {
     expect(foobarqix(13)).toEqual("Foo");
   });
 });
+
+describe("Implement the rule replace 5 by Foo", () => {
+  it("should return Foo when it contains 5 and not %5", () => {
+    expect(foobarqix(52)).toEqual("Bar");
+  });
+});
