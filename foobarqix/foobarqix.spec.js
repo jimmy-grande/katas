@@ -51,8 +51,14 @@ describe("Implement the rule replace 3 by Foo", () => {
   });
 });
 
-describe("Implement the rule replace 5 by Foo", () => {
-  it("should return Foo when it contains 5 and not %5", () => {
+describe("Implement the rule replace 5 by Bar", () => {
+  it("should return Bar when it contains 5 and not %5", () => {
     expect(foobarqix(52)).toEqual("Bar");
+  });
+});
+
+describe("Implement the rule replace 7 by Qix", () => {
+  it("should return Qix when it contains 5 and not %5", () => {
+    expect(foobarqix(17)).toEqual("Qix");
   });
 });
