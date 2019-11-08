@@ -44,3 +44,9 @@ describe("Implement combined '%' rules", () => {
     expect(foobarqix(42)).toEqual("FooQix");
   });
 });
+
+describe("Implement the rule replace 3 by Foo", () => {
+  it("should return Foo when it contains 3 and not %3", () => {
+    expect(foobarqix(13)).toEqual("Foo");
+  });
+});

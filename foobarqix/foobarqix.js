@@ -14,6 +14,10 @@ function foobarqix(n) {
   if (n % 7 === 0) {
     return "Qix";
   }
+
+  if (n && n.toString().includes("3")) {
+    return "Foo";
+  }
   return n;
 }
 
