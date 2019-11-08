@@ -7,9 +7,31 @@ const discountMap = {
   5: 0.75
 };
 
+function generateSet(array) {
+  return array.reduce((acc, book) => {
+    return reduceSet(acc, book, 0);
+  }, {});
+}
+
+function reduceSet(acc, book, idx) {
+  if (!(idx in acc)) {
+    acc[idx] = new Set([book]);
+    return acc;
+  } else if (!acc[idx].has(book)) {
+    acc[idx].add(book);
+    return acc;
+  } else {
+    return reduceSet(acc, book, idx + 1);
+  }
+}
+
 function potter(books) {
-  const nbUniq = new Set(books).size;
-  return nbUniq ? books.length * discountMap[nbUniq] * price : 0;
+  const sets = generateSet(books);
+  return books && books.length > 0
+    ? Object.values(sets).reduce((acc, set) => {
+        return acc + set.size * price * discountMap[set.size];
+      }, 0)
+    : 0;
 }
 
 module.exports = potter;

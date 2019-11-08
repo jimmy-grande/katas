@@ -41,3 +41,18 @@ describe("Simple discount", () => {
     expect(potter([0, 1, 2, 3, 4])).toEqual(8 * 5 * 0.75);
   });
 });
+
+describe("Several discounts", () => {
+  it("should apply a 5% discount + a book", () => {
+    expect(potter([0, 0, 1])).toEqual(8 + 8 * 2 * 0.95);
+  });
+  it("should apply two 5% discount", () => {
+    expect(potter([0, 0, 1, 1])).toEqual(2 * (8 * 2 * 0.95));
+  });
+  it("should apply a 20% discount + a 5% discount", () => {
+    expect(potter([0, 0, 1, 2, 2, 3])).toEqual(8 * 4 * 0.8 + 8 * 2 * 0.95);
+  });
+  it("should apply a 25% discount = a book", () => {
+    expect(potter([0, 1, 1, 2, 3, 4])).toEqual(8 + 8 * 5 * 0.75);
+  });
+});
