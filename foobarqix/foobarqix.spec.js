@@ -14,7 +14,6 @@ describe("Implement the rule divisible by 3", () => {
     expect(foobarqix(3)).toEqual("Foo");
     expect(foobarqix(6)).toEqual("Foo");
     expect(foobarqix(9)).toEqual("Foo");
-    expect(foobarqix(30)).toEqual("Foo");
   });
 });
 
@@ -39,5 +38,9 @@ describe("Implement combined '%' rules", () => {
     expect(foobarqix(15)).toEqual("FooBar");
     expect(foobarqix(30)).toEqual("FooBar");
     expect(foobarqix(45)).toEqual("FooBar");
+  });
+  it("should return FooQix if number is divisible by 3 and 7", () => {
+    expect(foobarqix(21)).toEqual("FooQix");
+    expect(foobarqix(42)).toEqual("FooQix");
   });
 });

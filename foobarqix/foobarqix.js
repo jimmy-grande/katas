@@ -1,6 +1,12 @@
 function foobarqix(n) {
   if (n % 3 === 0) {
-    return n % 5 === 0 ? "FooBar" : "Foo";
+    if (n % 5 === 0) {
+      return "FooBar";
+    }
+    if (n % 7 === 0) {
+      return "FooQix";
+    }
+    return "Foo";
   }
   if (n % 5 === 0) {
     return "Bar";
