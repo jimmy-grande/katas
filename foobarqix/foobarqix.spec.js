@@ -17,3 +17,12 @@ describe("Implement the rule divisible by 3", () => {
     expect(foobarqix(30)).toEqual("Foo");
   });
 });
+
+describe("Implement the rule divisible by 5", () => {
+  it("should return Foo if number is divisible by 5", () => {
+    expect(foobarqix(5)).toEqual("Bar");
+    expect(foobarqix(10)).toEqual("Bar");
+    // expect(foobarqix(15)).toEqual("Bar");
+    expect(foobarqix(20)).toEqual("Bar");
+  });
+});
