@@ -12,6 +12,7 @@
     "start": "node index.js",
     "fizzbuzz": "node ./katafizzbuzz/index.js",
     "foobarqix": "node ./foobarqix/index.js",
-    "test": "jest --watchAll --coverage"
+    "test": "jest --coverage",
+    "test:dev": "jest --coverage --watchAll"
   }
 }
